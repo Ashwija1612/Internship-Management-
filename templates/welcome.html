@@ -1,0 +1,154 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#      <title>Internship Portal</title>#}
+{#	  <meta charset="utf-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">#}
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>#}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>#}
+{#	<style>#}
+{#	.abc{#}
+{#position:absolute;#}
+{#left:320px;#}
+{#top:500px;#}
+{#width:70%;#}
+{#height:90%;#}
+{#  }#}
+{#  .centered{#}
+{#       position:absolute;#}
+{#	   top:110px;#}
+{#	   left:50%;#}
+{#	   transform:translate(-50%,-50%);#}
+{#	   font-style:italic;#}
+{#	   font-size:70px;#}
+{#	   }#}
+{#	.image {#}
+{#        position: absolute;#}
+{#        top: 340px;#}
+{#        left: 50%;#}
+{#        transform: translate(-50%, -50%);#}
+{#    }#}
+{#	</style>#}
+{#</head>#}
+{#<body>#}
+{#<div class="centered">#}
+{#<b><h1 style="text-align:center;">WELCOME!!!<h1><b>#}
+{#</div>#}
+{#<div class="image">#}
+{#<img src="{{url_for('static', filename='front.jpeg')}}" alt="internship" width="400" height="400">#}
+{#</div>#}
+{#<div class="abc">#}
+{#<div class="row" style="font-size:50px">#}
+{#<div>#}
+{#<lable><h2>Connect yourself with the right set of person as your requirnments..<h2></lable>#}
+{#</div>#}
+{#</div>#}
+{#<br>#}
+{#    <br><a href="/login" style="margin-left:34%;border-radius:18px"  class="btn btn-success" >COME EXPLORE</a><br>#}
+{##}
+{#</div>#}
+{#</body>#}
+{#</html>#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Internship Portal</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+	*{
+	margin: 0;
+	padding:0;
+	font-family: Century Gothic;
+	}
+ul{
+	float: right;
+	margin-top:25px;
+	list-style: none;
+
+}
+ul li{
+	display: inline-block;
+}
+ul li a{
+	text-decoration: none;
+	color: #030202;
+	padding: 5px 20px;
+	background-color: #edb313;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+ul li.active a{
+	background-color: #edb313;
+	color: #000;
+	}
+ul li a: hover{
+	background-color: #fff;
+	color: #000;
+}
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+.title{
+position: absolute;
+top: 65%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.title h1{
+	color: #ffffff;
+	font-size: 70px;
+}
+.content{
+position: absolute;
+top: 80%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.content h5{
+	color: #fff;
+	font-size: 20px;
+}
+.button{
+	position: absolute;
+top: 90%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.btn{
+	border: 1px solid #edb313;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+    TRANSITION: 0.6s ease;
+}
+.btn:hover{
+	background-color: #808080;
+	color: #000;
+}
+</style>
+</head>
+<body style="background-image:url('static/internship4.jfif');background-repeat:no-repeat;height:500px; background-size: cover; background-position: center; background-image-opacity: 0.1">
+
+	<header>
+		<div class="main">
+		</div>
+		<div class="title">
+		<h1>WELCOME!!!</h1>
+		</div>
+		<div class="content">
+		<h5>Connecting great minds to right spots!!</h5>
+		</div>
+		<div class="button">
+		<a href="/login"  class="btn btn-success">COME EXPLORE</A>
+		</div>
+	</header>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Internship portal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+.main{
+background-color:white;
+position:absolute;
+right:500px;
+top:50px;
+  width:40%;
+  height:90%;
+  }
+   img{
+   width:1000px;
+   height:740px;
+   }
+</style>
+</head>
+<body>
+
+</head>
+<body>
+    <div class="main">
+<div class="inner">
+<form action="/student-register" method="post">
+<h1 style="text-align: center">REGISTER HERE NOW!</h1>
+<hr>
+<div align="center";><h2><b>Find the INTERNSHIP suitable for the skill set you persuade</b><h2></div>
+    <div class="form-holder active"><p><h5>Name:<input type="text" class="form-control" id="fname" name="fname" required></div>
+    <div class="form-holder" required>Email:<input type="text" placeholder="e-mail" class="form-control"></div>
+<div class="form-holder"><p><h5>Set Password:<input type="text" class="form-control" id="fpass" name="fpass" required><br></div>
+
+<div class="form-holder" required><h5>Gender:<input type="radio" style="margin-left:10px;" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>
+  </div><br>
+<div class="form-holder" required><h5>Date Of Birth:
+  <input type="date" class=" id="birthday" name="birthday">
+</p></div>
+<div class="checkbox" required>
+						<label>
+							<h6><input type="checkbox" checked> I agree all statement in <a href="#">Terms & Conditions</a>
+							<span class="checkmark"></span></h6>
+						</label>
+					</div>
+					<div class="form-login">
+						<h6>
+						<p>Already Have account? <a href="/login">Login</a></p></h6>
+					</div>
+<p><h5><input type="submit" class="btn btn-info" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" class="btn btn-info" value="reset"></h5></p><br><br>
+</form>
+</div>
+</div>
+</body>
+</html>

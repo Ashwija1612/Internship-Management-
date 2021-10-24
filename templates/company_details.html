@@ -1,0 +1,337 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <title>Internship portal</title>#}
+{#    <meta charset="utf-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">#}
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>#}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>#}
+{#<style>#}
+{##}
+{#.main{#}
+{#background-color:white;#}
+{#position:absolute;#}
+{#right:450px;#}
+{#top:10px;#}
+{#  width:40%;#}
+{#  height:90%;#}
+{#  }#}
+{#   img{#}
+{#   width:1000px;#}
+{#   height:740px;#}
+{#   }#}
+{#   .button{#}
+{#   #}
+{#position:absolute;#}
+{#left:260px;#}
+{#top:850px;#}
+{#  width:70%;#}
+{#  height:90%;#}
+{#  }#}
+{#   .image {#}
+{#    position: absolute;#}
+{#    top: 80px;#}
+{#    left: 28%;#}
+{#    opacity: 0.3;#}
+{#}#}
+{#   .image2 {#}
+{#    position: absolute;#}
+{#    top: 80px;#}
+{#    right: 28%;#}
+{#    opacity: 0.3;#}
+{#}#}
+{#</style>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#</head>#}
+{#<body>#}
+{#    <div class="main">#}
+{#        <div class="image">#}
+{#<img src="{{url_for('static', filename='log.jpg')}}" alt="internship" width="800" height="1000">#}
+{#</div>#}
+{#        <div class="image2">#}
+{#<img src="{{url_for('static', filename='log.jpg')}}" alt="internship" width="800" height="1000">#}
+{#</div>#}
+{#<div class="inner">#}
+{#<form action="companyregister" method="post">#}
+{#<h1 style="text-align: center">COMPANY DETAILS!</h1>#}
+{#<hr>#}
+{#     <div class="form-holder active"><p><h3>Name:<input type="text" class="form-control" id="pname" name="pname" required></div>#}
+{#    <div class="form-holder active"><p><h3>Incharge Name:<input type="text" class="form-control" id="Inname" name="Inname" required></div>#}
+{#	<div class="form-holder active"><p><h3>Designation:<input type="text" class="form-control" id="descrip" name="descrip" required></div>#}
+{#	<div class="form-holder active"><p><h3>Incharge Contact Number:<input type="text" class="form-control" id="Inphone" name="Inphone" required></div>#}
+{#	<div class="form-holder active"><p><h3>Brief on company:<input type="text" class="form-control" id="Cdes" name="Cdes" required></div>#}
+{#	<h5>Please fill the website link while fillinf the brief</h5>#}
+{#	<div class="form-holder active"><p><h3>Internship profile :<input type="text" class="form-control" id="flink" name="flink" required></div>#}
+{#    <input type="checkbox" id="interest1" name="interest1" value="data science">#}
+{#  <label for="interest"> Data Science</label><br>#}
+{#  <input type="checkbox" id="interest2" name="interest2" value="ml">#}
+{#  <label for="interest2"> ML</label><br>#}
+{#  <input type="checkbox" id="interest3" name="interest3" value="IOT">#}
+{#  <label for="interest3">IOT</label><br><br>#}
+{#	<div class="form-holder active"><p><h3>Duration:<input type="text" class="form-control" id="due" name="due" required></div><br>#}
+{#	<div class="form-holder" required><h3>Will the Stipend be provided?:<input type="radio" style="margin-left:10px;" id="yes" name="yes" value="yes">#}
+{#  <label for="yes">Yes</label>#}
+{#  <input type="radio" id="No" name="No" value="No">#}
+{#  <label for="No">No</label>#}
+{#  </div>#}
+{#  <div class="form-holder"><p><h3>Last date to register:<input type="text" class="form-control" id="fname" name="fname" required></div>#}
+{#</p></div>#}
+{#<div class="button">#}
+{#<p><h3 style="text-align="center"><input type="submit" class="btn btn-info" value="Submit"></h3></p><br><br>#}
+{#</form>#}
+{#</div>#}
+{#</div>#}
+{#</body>#}
+{#</html>#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	font-family:Century Gothic;
+}
+body{
+	margin-top: 40px;
+}
+.regform{
+	width: 800px;
+	background-color:rgb(0,0,0,6);
+	margin: auto;
+	color: #ffff;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border-radius: 15px 15px 0px 0px;
+}
+.main{
+	background-color:rgb(0,0,0,0.5);
+	width: 800px;
+	margin:auto;
+}
+form{
+	padding: 10px;
+}
+#name{
+	width: 100%;
+	height: 100px;
+}
+.name{
+	margin-left:25px;
+	margin-top: 30px;
+	width: 125px;
+	color: white;
+	font-size: 18px;
+	font-weigth: 700;
+}
+.firstname{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.manager_name{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.manager{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.description{
+    position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.profile{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.duration{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 95px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.phone{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 255px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.option{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 532px;
+	height: 40px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+	outline: none;
+	overflow: hidden;
+}
+.option option{
+	font-size: 16px;
+}
+#coustomer{
+	margin-left: 25px;
+	color: white;
+	font-size: 18px;
+}
+.radio{
+	display: inline-block;
+	padding-right: 70px;
+	font-size: 25px;
+	margin-left: 25px;
+	margin-top: 15px;
+	color: white;
+}
+.radio input{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor:pointer:
+	outline: none;
+}
+.last{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 255px;
+	border-radius: 6px;
+	padding: 0 22px
+	font-size: 16px;
+	color:#555;
+}
+.btn{
+	background-color: #edb313;
+	display: block;
+	margin: 30px 350px;
+	text-align: center;
+	border-radius:12px;
+	border: 2px solid #edb313;
+	padding: 10px 14px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	transition: 0.25px;
+	}
+	btn: hover{
+	background-color: #edb313;
+}
+}
+</style>
+</head>
+<body style="background-image:url(static/company3.jpg);height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat">
+<form action="/register" method="post">
+	<div class="regform"><h1>Company Details</h1></div>
+	<div class="main">
+	<form>
+
+	<h2 class="name">Company Name</h2>
+	<input class="firstname" type="text" name="first_name">
+
+	<h2 class="name">Manager Name</h2>
+	<input class="manager_name" type="text" name="manager_name">
+
+	<h2 class="name">Manager Designation</h2>
+	<input class="manager" type="text" name="manager">
+
+	<h2 class="name">Contact Number</h2>
+	<input class="phone" type="text" name="phone">
+
+	<h2 class="name">Brief on Internship</h2>
+	<input class="description" type="text" name="description">
+
+
+        <h2 class="name">Internship Profile</h2>
+	<select class="option" name="profile">
+	<option disabled="disabled" selected="selected">--Choose Option</option>
+<option>Data Science</option>
+<option>IoT</option>
+<option>Artificial Intelligence</option>
+</select>
+
+	<h2 class="name">Duration</h2>
+	<input class="duration" type="text" name="duration">
+
+
+	<h2 id="coustomer">Is stipend?</h2>
+
+	<label class="radio">
+		<input class="radio-one" type="radio" checked="checked" name="stipend">
+		<span class="checkmark"></span>
+		Yes
+	</label>
+	<label class="radio">
+		<input class="radio-one" type="radio" checked="checked" name="stipend">
+		<span class="checkmark"></span>
+		No
+	</label>
+
+	<h2 class="name">Last date</h2>
+	<input class="last" type="text" name="last">
+
+	 <input type="submit" class="btn" value="REGISTER" name="register">
+
+	</form>
+	</div>
+</body>
+</html>
